@@ -18,9 +18,6 @@
     </div>
 </div>
 </form>
-
-
-
 <table class="table">
     @foreach (var Restaurant in Model.Restaurants)
     {
@@ -30,11 +27,11 @@
         <td>@Restaurant.Cuisine</td>
         <td>
             <a class="btn btn-lg"
-               asp-page="./Detail" asp-route-restaurantId="@Restaurant.Id">
+               asp-page=".\Detail" asp-route-restaurantId="@Restaurant.Id">
                 <i class="fa fa-search-plus"></i>
             </a>
             <a class="btn btn-lg"
-               asp-page="./Edit" asp-route-restaurantId="@Restaurant.Id">
+               asp-page=".\Edit" asp-route-restaurantId="@Restaurant.Id">
                 <i class="fa fa-edit"></i>
             </a>
         </td>

@@ -1,4 +1,4 @@
-﻿using System;
+﻿  using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -30,14 +30,14 @@ namespace OdeToFood.Pages.Restaurants
             Restaurant = restaurantData.GetById(restaurantId);
             if (Restaurant == null)
             {
-                return RedirectToPage(".NotFound");
+                return RedirectToPage("./NotFound");
             }
             return Page();
         }
 
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid)
+            if(ModelState.IsValid)
             {
                 restaurantData.Update(Restaurant);
                 restaurantData.Commit();
