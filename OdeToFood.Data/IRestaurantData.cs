@@ -1,7 +1,5 @@
 ﻿using OdeToFood.Core;
 using System.Collections.Generic;
-using System.Data.Common;
-using System.Text;
 namespace OdeToFood.Data
 {
     public interface IRestaurantData
