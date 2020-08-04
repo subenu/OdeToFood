@@ -23,6 +23,16 @@ namespace OdeToFood.Data
             return restaurants.SingleOrDefault(r => r.Id == id);
     }
 
+
+
+        public Restaurant Add(Restaurant newRestaurant)
+        {
+            restaurants.Add(newRestaurant);
+            newRestaurant.Id = restaurants.Max(restaurants => restaurants.Id) + 1;
+            return newRestaurant;
+        }
+
+
         public Restaurant Update(Restaurant updatedRestaurant) 
         {
             var restaurant = restaurants.SingleOrDefault(r => r.Id == updatedRestaurant.Id);
@@ -46,11 +56,6 @@ namespace OdeToFood.Data
                    where string.IsNullOrEmpty(name) || r.Name.StartsWith(name)  
                    orderby r.Name
                    select r;
-        }
-
-        public Restaurant Add(Restaurant newRestaurant)
-        {
-            throw new NotImplementedException();
         }
 
         public Restaurant Delete(int id)

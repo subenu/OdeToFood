@@ -1,4 +1,5 @@
-﻿using OdeToFood.Core;
+﻿using Microsoft.EntityFrameworkCore;
+using OdeToFood.Core;
 using System.Collections.Generic;
 using System.Linq; 
 
@@ -51,7 +52,7 @@ namespace OdeToFood.Data
     public Restaurant Update(Restaurant updatedRestaurant)
     {
             var entity = db.Restaurants.Attach(updatedRestaurant);
-            entity.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            entity.State = EntityState.Modified;
             return updatedRestaurant; 
     }
 }

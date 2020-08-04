@@ -1,5 +1,6 @@
 ﻿using OdeToFood.Core;
 using System.Collections.Generic;
+using System.Linq;
 namespace OdeToFood.Data
 {
     public interface IRestaurantData
@@ -9,7 +10,6 @@ namespace OdeToFood.Data
         Restaurant Update(Restaurant updatedRestaurant);
         Restaurant Add(Restaurant newRestaurant);
         Restaurant Delete(int id);
-
         int Commit();
     }
 }
